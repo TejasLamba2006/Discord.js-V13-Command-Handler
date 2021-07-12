@@ -1,0 +1,6 @@
+{
+    "token": "ODU5NzI0MDQ2MDA1OTYwNzA1.YNw2aQ.ysI01JmrFDYCKIIVaR4zjXkMU1U",
+    "mongoString": "your mongodb connection string",
+    "prefix": "!",
+    "color": "#303136"
+}
