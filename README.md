@@ -74,4 +74,4 @@ For support join our [discord support server](https://discord.gg/xtessK2DPA).
 
 # Authors
 
-- [@pritu](https://github.com/TajuModding)
+- [@TajuModding](https://github.com/TajuModding)
