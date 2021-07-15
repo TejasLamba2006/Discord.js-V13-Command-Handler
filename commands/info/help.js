@@ -27,6 +27,7 @@ module.exports = {
         fun: "🎆",
         info: "ℹ",
         ticket: "🎫",
+        owner: "👮"
       };
 
       readdirSync("./commands/").forEach((dir) => {
