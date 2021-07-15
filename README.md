@@ -15,12 +15,14 @@ To setup this bot just follow below steps
 
 Create a new File named `config.json` and put below stuff in that file,
 
-```config
+```js
 {
-    "token": "your bot token",
-    "mongoString": "your mongodb connection string",
-    "prefix": "your bot prefix",
-    "color": "#303136"
+    "token": "",
+    "mongoString": "",
+    "prefix": "",
+    "color": "",
+    "owner": "",
+    "ERROR_LOGS_CHANNEL": ""
 }
 
 ```
