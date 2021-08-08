@@ -14,6 +14,7 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+    if (!message.member.permissions.has('MANAGE_GUILD') return message.channel.send(`You dont have enough perms my man!`)
     if (!args[0]) {
       return message.channel.send(
         `Usage: \`${prefix}antilink <on|off>\``
