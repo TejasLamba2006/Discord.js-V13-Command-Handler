@@ -1,16 +1,27 @@
 {
   "name": "discord-js-v13-tutorials",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hey v13 is coming soon.. so i made this handler and i also added some main commands like help and ping commands so you can self host this bot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Tejas Lamba#1924",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^13.0.0-dev.28b5ffb.1625702624",
+    "discord.js": "^13.0.0",
     "glob": "^7.1.7"
-  }
+  },
+  "devDependencies": {
+    "node": "^16.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TajuModding/Discord.js-V13-Command-Handler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TajuModding/Discord.js-V13-Command-Handler/issues"
+  },
+  "homepage": "https://github.com/TajuModding/Discord.js-V13-Command-Handler#readme"
 }
