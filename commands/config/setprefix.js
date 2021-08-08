@@ -14,6 +14,8 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
+       if (!message.member.permissions.has('MANAGE_GUILD') return message.channel.send(`You dont have enough perms my man!`)
+    
     const data = await model.findOne({
       GuildID: message.guild.id,
     });
