@@ -18,16 +18,9 @@ mongoose
       useFindAndModify: false,
     })
     .then(
-      console.log(
-        chalk.bgGreenBright.black(
-          ` ${client.user.username} connecting to Mongo DB `
-        )
-      )
+      console.log(` ${client.user.username} connecting to Mongo DB `)
     )
     .catch((err) =>
-      console.log(
-        chalk.bgRedBright.black(
-          ` ${client.user.username} could not connect to mongo DB `
-        )
+      console.log(` ${client.user.username} could not connect to mongo DB `)
       )
     );
