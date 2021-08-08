@@ -6,7 +6,7 @@ const prefix = require("../../config.json").prefix;
 module.exports = {
   name: "autorole",
   description: `Change autorole per server!`,
-  aliases: ["ar"],
+  aliases: ["ar", "joinrole"],
   emoji: "🖥️",
   /**
    * @param {Client} client
@@ -15,47 +15,48 @@ module.exports = {
    */
   run: async (client, message, args) => {
     if (!args[0]) {
-      return message.channel.send(
-        `Usage: \`${prefix}antilink <on|off>\``
-      );
+      return message.channel.send(`\`Usage: ${prefix}autorole <@role|off>\``)
     }
-    if (args[0] === "On" || args[0] === "on") {
+    if (message.mentions.roles.first()) {
       const data = await model.findOne({
-        GuildID: message.guild.id,
+        GuildID: message.guild.id
       });
 
       if (data) {
         await model.findOneAndRemove({
-          GuildID: message.guild.id,
+          GuildID: message.guild.id
         });
 
-        message.channel.send(`Antilink is now active!`);
+        message.channel.send(`Autorole is active and role set to ${message.mentions.roles.first()}`);
 
         let newData = new model({
-          GuildID: message.guild.id,
+          Role: message.mentions.roles.first().id,
+          GuildID: message.guild.id
         });
         newData.save();
       } else if (!data) {
-        message.channel.send(`Antilink is now active`);
+        message.channel.send(`Autorole is active and role set to ${message.mentions.roles.first()}`);
 
         let newData = new model({
-          GuildID: message.guild.id,
+          Role: message.mentions.roles.first().id,
+          GuildID: message.guild.id
         });
         newData.save();
       }
-    } else if (args[0] === "off" || args[0] === "Off") {
+    } else if (args[0] === "off") {
       const data2 = await model.findOne({
-        GuildID: message.guild.id,
+        GuildID: message.guild.id
       });
 
       if (data2) {
         await model.findOneAndRemove({
-          GuildID: message.guild.id,
+          GuildID: message.guild.id
         });
 
-        return message.channel.send(`Antilink has been turned off!`);
+        return message.channel.send(`Autorole has been turned off!`);
+
       } else if (!data2) {
-        return message.channel.send(`Antilink isn't setup!`);
+        return message.channel.send(`Autorole isn't setup!`)
       }
     }
   },
